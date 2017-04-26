@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gs-serving-web-content:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/gs_serving_web_content_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="gs-serving-web-content/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gs-serving-web-content" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

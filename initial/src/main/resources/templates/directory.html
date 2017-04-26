@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Directory</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<form action="/client" method="get">
+    <input type="text" id="path" name="path"/>
+    <button type="submit">Go</button>
+</form>
+
+<table>
+    <tbody>
+    <tr th:each="row : *{directoryStatsBeanCollection}">
+        <td>
+            <p th:text="'Name:, ' + ${row.name}" />
+            <p th:text="'Path:, ' + ${row.path}" />
+            <p th:text="'Absolute Path:, ' + ${row.absolutePath}" />
+            <p th:text="'Directroy?:, ' + ${row.directory}" />
+            <p th:text="'Hidden?:, ' + ${row.hidden}" />
+            <p th:text="'File?:, ' + ${row.file}" />
+            <p th:text="'Size:, ' + ${row.size}" />
+            <p th:text="'Last Modifieds:, ' + ${row.lastModified}" />
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!--<p>Result:</p>-->
+<!--<p th:text="${directoryStatsBeanCollection.name}" />-->
+<!--<p th:text="'Path:, ' + ${directoryStatsBeanCollection.path}" />-->
+<!--<p th:text="'Absolute Path:, ' + ${directoryStatsBeanCollection.absolutePath}" />-->
+<!--<p th:text="'Directroy?:, ' + ${directoryStatsBeanCollection.isDirectory}" />-->
+<!--<p th:text="'Hidden?:, ' + ${directoryStatsBeanCollection.isHidden}" />-->
+<!--<p th:text="'File?:, ' + ${directoryStatsBeanCollection.isFile}" />-->
+<!--<p th:text="'Size?:, ' + ${directoryStatsBeanCollection.size}" />-->
+<!--<p th:text="'Last Modified?:, ' + ${directoryStatsBeanCollection.lastModified}" />-->
+
+</body>
+</html>
